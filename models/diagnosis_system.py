@@ -1,6 +1,12 @@
 from models.Diseases.flu import Flu
 from models.Diseases.diabetes import Diabetes
 from models.Diseases.migraine import Migraine
+from models.Diseases.covid import Covid
+from models.Diseases.appendicitis import Appendicitis
+from models.Diseases.asthma import Asthma
+from models.Diseases.cold import Cold
+from models.Diseases.food_poisoning import Food_Poisoning
+from models.Diseases.hypertension import Hypertension
 
 class DiagnosisSystem:
     def __init__(self):
@@ -13,10 +19,22 @@ class DiagnosisSystem:
         flu = Flu ()
         diabetes = Diabetes ()
         migraine = Migraine ()
+        covid = Covid ()
+        appendicitis = Appendicitis ()
+        asthma = Asthma ()
+        cold = Cold ()
+        food_poisoning = Food_Poisoning ()
+        hypertension = Hypertension()
 
         self.add_disease(flu)
         self.add_disease(diabetes)
         self.add_disease(migraine)
+        self.add_disease(covid)
+        self.add_disease(appendicitis)
+        self.add_disease(asthma)
+        self.add_disease(cold)
+        self.add_disease(food_poisoning)
+        self.add_disease(hypertension)
 
     def diagnose (self, user_symptoms):
         results = []
